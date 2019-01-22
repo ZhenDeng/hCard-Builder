@@ -1,0 +1,180 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="builder">
+  <div class="col-md-5 col-md-offset-1 col-sm-12">
+      <form #builderForm="ngForm" class="form-horizontal">
+          <div class="formtitle">
+              <h2>
+                  {{title}}
+              </h2>
+          </div>
+
+          <div class="personaldetails">
+              <div>
+                  <h1>
+                      <span class="headline">{{personalDetailsHeader}}</span>
+                  </h1>
+              </div>
+
+              <div class="form-group">
+                  <div class="col-md-6 col-sm-12">
+                      <label>GIVEN NAME:</label>
+                      <input class="form-control" name="firstName" [(ngModel)]="firstName" #firstNameValidation="ngModel" required />
+                      <div class="form-control alert-danger"
+                           *ngIf="firstNameValidation.errors && (firstNameValidation.dirty || firstNameValidation.touched)">
+                          <p *ngIf="firstNameValidation.errors.required">First name can not be empty</p>
+                      </div>
+                  </div>
+                  <div class="col-md-6 col-sm-12">
+                      <label>SURNAME:</label>
+                      <input class="form-control" name="lastName" [(ngModel)]="lastName" #lastNameValidation="ngModel" required />
+                      <div class="form-control alert-danger"
+                           *ngIf="lastNameValidation.errors && (lastNameValidation.dirty || lastNameValidation.touched)">
+                          <p *ngIf="lastNameValidation.errors.required">Last name can not be empty</p>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="form-group">
+                  <div class="col-md-6 col-sm-12">
+                      <label>EMAIL:</label>
+                      <input type="email" class="form-control" name="email" [(ngModel)]="email" #emailValidation="ngModel" pattern="[^ @]*@[^ @]*" required />
+                      <div class="form-control alert-danger"
+                           *ngIf="emailValidation.errors && (emailValidation.dirty || emailValidation.touched)">
+                          <p *ngIf="emailValidation.errors.pattern">Email must contain at least the @ character</p>
+                          <p *ngIf="emailValidation.errors.required">Email can not be empty</p>
+                      </div>
+                  </div>
+
+                  <div class="col-md-6 col-sm-12">
+                      <label>PHONE:</label>
+                      <input type="tel" class="form-control" name="phone" [(ngModel)]="phone" #phoneValidation="ngModel" pattern="^\({0,1}((0|\+61)(2|4|3|7|8)){0,1}\){0,1}( |-){0,1}[0-9]{2}( |-){0,1}[0-9]{2}( |-){0,1}[0-9]{1}( |-){0,1}[0-9]{3}$" required />
+                      <div class="form-control alert-danger"
+                           *ngIf="phoneValidation.errors && (phoneValidation.dirty || phoneValidation.touched)">
+                          <p *ngIf="phoneValidation.errors.pattern">Please input valid Australian phone number</p>
+                          <p *ngIf="phoneValidation.errors.required">Phone number can not be empty</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+
+
+          <div class="addresssection">
+              <div>
+                  <h1>
+                      <span class="headline">{{addressSection}}</span>
+                  </h1>
+              </div>
+              <div class="form-group">
+                  <div class="col-md-6 col-sm-12">
+                      <label>HOURSE NAME OR #:</label>
+                      <input class="form-control" name="houseName" [(ngModel)]="houseName" #houseNameValidation="ngModel" required />
+                      <div class="form-control alert-danger"
+                           *ngIf="houseNameValidation.errors && (houseNameValidation.dirty || houseNameValidation.touched)">
+                          <p *ngIf="houseNameValidation.errors.required">Street address can not be empty</p>
+                      </div>
+                  </div>
+
+                  <div class="col-md-6 col-sm-12">
+                      <label>STREET:</label>
+                      <input class="form-control" name="street" [(ngModel)]="street" #streetValidation="ngModel" required />
+                      <div class="form-control alert-danger"
+                           *ngIf="streetValidation.errors && (streetValidation.dirty || streetValidation.touched)">
+                          <p *ngIf="streetValidation.errors.required">Street can not be empty</p>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="form-group">
+                  <div class="col-md-6 col-sm-12">
+                      <label>SUBURB:</label>
+                      <input class="form-control" name="suburb" [(ngModel)]="suburb" #suburbValidation="ngModel" required />
+                      <div class="form-control alert-danger"
+                           *ngIf="suburbValidation.errors && (suburbValidation.dirty || suburbValidation.touched)">
+                          <p *ngIf="suburbValidation.errors.required">Suburb can not be empty</p>
+                      </div>
+                  </div>
+
+                  <div class="col-md-6 col-sm-12">
+                      <label>STATE:</label>
+                      <input class="form-control" name="state" [(ngModel)]="state" #stateValidation="ngModel" required />
+                      <div class="form-control alert-danger"
+                           *ngIf="stateValidation.errors && (stateValidation.dirty || stateValidation.touched)">
+                          <p *ngIf="stateValidation.errors.required">City can not be empty</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="form-group">
+                  <div class="col-md-6 col-sm-12">
+                      <label>POSTCODE:</label>
+                      <input class="form-control" name="postcode" [(ngModel)]="postcode" #postcodeValidation="ngModel" pattern="(\d{4})" required />
+                      <div class="form-control alert-danger"
+                           *ngIf="postcodeValidation.errors && (postcodeValidation.dirty || postcodeValidation.touched)">
+                          <p *ngIf="postcodeValidation.errors.pattern">Please input valid Australian postcode</p>
+                          <p *ngIf="postcodeValidation.errors.required">Postcode can not be empty</p>
+                      </div>
+                  </div>
+
+                  <div class="col-md-6 col-sm-12">
+                      <label>COUNTRY:</label>
+                      <input class="form-control" name="country" [(ngModel)]="country" #countryValidation="ngModel" required />
+                      <div class="form-control alert-danger"
+                           *ngIf="countryValidation.errors && (countryValidation.dirty || countryValidation.touched)">
+                          <p *ngIf="countryValidation.errors.required">Country can not be empty</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <div>
+              <div class="form-group text-center">
+                  <button type="submit" class="btn btn-primary btn-lg" (click)="createCard()" [disabled]='!builderForm.valid'><i class="fa fa-cog"></i> Create hCard</button>
+              </div>
+          </div>
+          <div>
+              <div class="form-group text-center text-success">
+                  {{outputMessage}}
+              </div>
+          </div>
+      </form>
+  </div>
+
+  <div class="previewcard">
+      <div class="col-md-5 col-sm-12">
+          <div class="well well-lg wellpadding">
+                  <div class="text-right ptitle">
+                      {{preview}}
+                  </div>
+              <div class="card">
+                  <div class="card-header cardheaderstyle"></div>
+                  <div class="card-body cardbodystyle">
+                      <div class="input-group input-group-sm">
+                          <span class="input-group-addon labelstyle" id="sizing-addon1">EMAIL</span>
+                          <input class="form-control labelstyle" name="emailPreview" aria-describedby="sizing-addon1" value="{{email}}" disabled>
+                      </div>
+
+                      <div class="input-group input-group-sm inputgroupstyle">
+                          <span class="input-group-addon labelstyle" id="sizing-addon1">PHONE</span>
+                          <input class="form-control labelstyle" name="phonePreview" aria-describedby="sizing-addon1" value="{{phone}}" disabled>
+                      </div>
+                      <div class="input-group input-group-sm inputgroupstyle">
+                          <span class="input-group-addon labelstyle" id="sizing-addon1">ADDRESS</span>
+                          <input class="form-control labelstyle" name="houseNameStreetPreview" aria-describedby="sizing-addon1" value="{{houseName}} {{street}}" disabled>
+                      </div>
+                      <div class="input-group input-group-sm inputgroupstyle">
+                          <input class="form-control labelstyle" name="suburbStatePreview" aria-describedby="sizing-addon1" value="{{suburb}} {{state}}" disabled>
+                      </div>
+                      <div class="input-group input-group-sm inputgroupstyle">
+                          <span class="input-group-addon labelstyle" id="sizing-addon1">POSTCODE</span>
+                          <input class="form-control labelstyle" name="postcodePreview" aria-describedby="sizing-addon1" value="{{postcode}}" disabled>
+
+                          <span class="input-group-addon labelstyle" id="sizing-addon1">COUNTRY</span>
+                          <input class="form-control labelstyle" name="countryPreview" aria-describedby="sizing-addon1" value="{{country}}" disabled>
+                      </div>
+                  </div>
+                  
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

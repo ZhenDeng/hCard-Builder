@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2016
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hCard-Builder", "hCard-Builder\hCard-Builder.csproj", "{7B5E7580-305B-4FC2-B736-5BE8A61ED791}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7B5E7580-305B-4FC2-B736-5BE8A61ED791}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B5E7580-305B-4FC2-B736-5BE8A61ED791}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B5E7580-305B-4FC2-B736-5BE8A61ED791}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B5E7580-305B-4FC2-B736-5BE8A61ED791}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5BCBE0FC-5F21-4BE7-B30B-AA4C498EA186}
+	EndGlobalSection
+EndGlobal
