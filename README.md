@@ -14,8 +14,8 @@ preview pane should automatically update to show the content entered in the form
 
 ## How to use
 
-1. Using Visual Studios to open this project
+1. Using Visual Studios to open this project]
 
-2. Waiting for Visual Studios to install packages automatically and build the solution
+2. Using Visual Code to open ClientApp folder and run npm install in console
 
-3. Run the project
+3. Build the solution and run project in VS
